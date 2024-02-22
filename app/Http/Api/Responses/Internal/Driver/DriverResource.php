@@ -1,0 +1,36 @@
+<?php
+
+declare(strict_types=1);
+
+namespace App\Http\Api\Responses\Internal\Driver;
+
+use Illuminate\Http\Request;
+use TiMacDonald\JsonApi\JsonApiResource;
+use Domain\Internal\DataTransferObjects\Driver\DriverData;
+
+final class DriverResource extends JsonApiResource
+{
+    public function __construct(DriverData $resource)
+    {
+        $this->resource = $resource;
+    }
+
+    public function toId(Request $request): string
+    {
+        return (string) $this->id;
+    }
+
+    public function toType(Request $request): string
+    {
+        return 'driver';
+    }
+
+    public function toAttributes(Request $request): array {
+        return [
+            'name' => $this->name,
+            'phone' => $this->phone,
+            'avatar_url' => $this->avatarUrl,
+            'partner_name' => $this->partnerName
+        ];
+    }
+}

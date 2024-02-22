@@ -1,0 +1,471 @@
+name: Endpoints
+description: ''
+endpoints:
+  -
+    httpMethods:
+      - GET
+    uri: sanctum/csrf-cookie
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Return an empty response simply to trigger the storage of the CSRF cookie in the browser.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 204
+        content: ''
+        headers:
+          cache-control: 'no-cache, private'
+          vary: Origin
+          set-cookie: 'XSRF-TOKEN=eyJpdiI6IkR5NTRucTRqQTNLTVk3RUtxMmw0Z3c9PSIsInZhbHVlIjoiVlVCdVBTVDZZT2piRENSZXFTcUc1cDhVRENhc3RIR0hlaUlwMnBrZmxReWN6Q3hhbTlhczk4TnErN3ZCeFhYSGFIckNJM2licW1FQlpZN2hQYzNEWmdoWjd5K2J1Y0FBdEdtamdjTS9XYmE1SHlJUDJ2bHdHUUk1Q3BnN01BSGoiLCJtYWMiOiI1MjNiZjE3ODI1MzNkYTM2NTBlYTIwOWQ5NGUzYTQwYjI4NGU0MzVlYzU4NTVlMjE0MDhmNjYwNDIyZjUzZTVhIiwidGFnIjoiIn0%3D; expires=Tue, 09 Jan 2024 18:57:08 GMT; Max-Age=7200; path=/; samesite=lax; chanhxe_session=eyJpdiI6IkJUaU1kYUpUNEY5MzJGK1YxclhjdHc9PSIsInZhbHVlIjoiMVFEc2pKT3lLbHhMdzNOMU1uc0lZcmJWQ0h3VDQ0UU9DWnJIbG9hbnhXSCtDaDg1cjd4UFpheGlYcVR5WGtHa3RwalgrSmhRUWR5cEcrZS80NmZLS2FWK1JONDFOSVJHN0dDZlZxd2RwMUpVV3FNMkRxclV2N3ZzYW5RQjM3ODIiLCJtYWMiOiJlNTQ5YWM4MGUwZDdlYWQ3YzUzZmQ1M2MxMzUwZWM1YTc0NGFjYjcyYTU5ZjJmMGE5MDhiZTAxZGU4NDM1ZDRkIiwidGFnIjoiIn0%3D; expires=Tue, 09 Jan 2024 18:57:08 GMT; Max-Age=7200; path=/; httponly; samesite=lax'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: api/user
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          vary: Origin
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: register
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Handle an incoming registration request.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      name:
+        name: name
+        description: 'Trường value không được có nhiều hơn 255 kí tự.'
+        required: true
+        example: duxlxacrkknsuoztvpj
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      email:
+        name: email
+        description: 'Trường value phải là email hợp lệ. Trường value không được có nhiều hơn 255 kí tự.'
+        required: true
+        example: katrina.powlowski@example.com
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      password:
+        name: password
+        description: ''
+        required: true
+        example: esse
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+    cleanBodyParameters:
+      name: duxlxacrkknsuoztvpj
+      email: katrina.powlowski@example.com
+      password: esse
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: login
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Handle an incoming authentication request.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      email:
+        name: email
+        description: 'Trường value phải là email hợp lệ.'
+        required: true
+        example: stacy24@example.net
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      password:
+        name: password
+        description: ''
+        required: true
+        example: TzsSj(Nm2)%l
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+    cleanBodyParameters:
+      email: stacy24@example.net
+      password: TzsSj(Nm2)%l
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: forgot-password
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Handle an incoming password reset link request.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      email:
+        name: email
+        description: 'Trường value phải là email hợp lệ.'
+        required: true
+        example: mcglynn.micaela@example.net
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+    cleanBodyParameters:
+      email: mcglynn.micaela@example.net
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: reset-password
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Handle an incoming new password request.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      token:
+        name: token
+        description: ''
+        required: true
+        example: error
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      email:
+        name: email
+        description: 'Trường value phải là email hợp lệ.'
+        required: true
+        example: kwilkinson@example.com
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      password:
+        name: password
+        description: ''
+        required: true
+        example: saepe
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+    cleanBodyParameters:
+      token: error
+      email: kwilkinson@example.com
+      password: saepe
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: 'verify-email/{id}/{hash}'
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: "Mark the authenticated user's email address as verified."
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the verify email.'
+        required: true
+        example: consequatur
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      hash:
+        name: hash
+        description: ''
+        required: true
+        example: assumenda
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+    cleanUrlParameters:
+      id: consequatur
+      hash: assumenda
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          vary: Origin
+          set-cookie: 'XSRF-TOKEN=eyJpdiI6ImwzTDJ3VXRRaVh5UURMSVRPY0t6b3c9PSIsInZhbHVlIjoiV0NtVzJVSzB3UEZzUE4vaGJLZ3V2QzFmUjBpbkpUOUxWa3RGOXJDRC9HcnlNdmhFd0RKWVpIV2RpWnAxRUh6WGRBbVZDTW9jaGdWei9IWnh2NmxHK1RpVnoxSEwvd1RTOGVQYVpZUEM2UENNbXpoR3psbFFFd3dYVFZvTXlicE4iLCJtYWMiOiIzZjA4MzdjZjY4ZjIwMWY3ZTgxNzUzMjRlNTk4ZmUwMjNjNGE0YmVjNjg4NzIwOWU1MmU3OWZiODdkOWY4MTc3IiwidGFnIjoiIn0%3D; expires=Tue, 09 Jan 2024 18:57:09 GMT; Max-Age=7200; path=/; samesite=lax; chanhxe_session=eyJpdiI6InZKd2VTNWhrUXVZcUN6Z2U5S1dKUlE9PSIsInZhbHVlIjoiaTJPOTlBSklmTElUZGhHbGJjUnNEVkFFQ25kLzBPZENhS3FuSHlTRFBzMHBTWExONW9GQmhMZzJUVWsyOG9RaGV4YWtOb3E4eDJxajhmdzUvWHBOMHQyUk1kSkRha1dBeGFJWUZJbDEzL0hVOEdHYis0djZIVDZ5K0R1emphdTIiLCJtYWMiOiJmNjZhOGNmYjE2OTkxNzZjOGE4YTkyYWIzZDZmNGEzNTVkNWU4OWMzN2ZmOGY4MTFmOWJmNmMzNzYwMjczYTgwIiwidGFnIjoiIn0%3D; expires=Tue, 09 Jan 2024 18:57:09 GMT; Max-Age=7200; path=/; httponly; samesite=lax'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: email/verification-notification
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Send a new email verification notification.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: logout
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Destroy an authenticated session.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: sanctum/token
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      email:
+        name: email
+        description: 'Trường value phải là email hợp lệ. Trường value không được có nhiều hơn 255 kí tự.'
+        required: true
+        example: ecassin@example.com
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      password:
+        name: password
+        description: ''
+        required: true
+        example: iste
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      device_name:
+        name: device_name
+        description: ''
+        required: true
+        example: qui
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+    cleanBodyParameters:
+      email: ecassin@example.com
+      password: iste
+      device_name: qui
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []

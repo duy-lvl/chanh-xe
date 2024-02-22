@@ -1,0 +1,46 @@
+name: 'Partner '
+description: |-
+
+  APIs for Partner app
+endpoints:
+  -
+    httpMethods:
+      - GET
+    uri: api/partner/notifications
+    metadata:
+      groupName: 'Partner '
+      groupDescription: |-
+
+        APIs for Partner app
+      subgroup: Notification
+      subgroupDescription: 'Partner Notification'
+      title: 'Get Notifications - Handle an incoming get Notifications request from Partner.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          vary: Origin
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []

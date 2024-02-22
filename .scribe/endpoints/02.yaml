@@ -1,0 +1,2321 @@
+name: Partner
+description: |-
+
+  APIs for Partner system
+endpoints:
+  -
+    httpMethods:
+      - PUT
+    uri: 'api/internal/orders/{code}/status/lost'
+    metadata:
+      groupName: Partner
+      groupDescription: |-
+
+        APIs for Partner system
+      subgroup: Order
+      subgroupDescription: 'Order interactions'
+      title: "Confirm order - Update an order's status to Confirmed"
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      code:
+        name: code
+        description: ''
+        required: true
+        example: rerum
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+    cleanUrlParameters:
+      code: rerum
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      reason:
+        name: reason
+        description: ''
+        required: true
+        example: eum
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+    cleanBodyParameters:
+      reason: eum
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: api/partner/login/token
+    metadata:
+      groupName: Partner
+      groupDescription: |-
+
+        APIs for Partner system
+      subgroup: Auth
+      subgroupDescription: 'Auth for Partner'
+      title: 'Login Partner - Return a personal access token.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      username:
+        name: username
+        description: ''
+        required: true
+        example: quo
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      password:
+        name: password
+        description: ''
+        required: true
+        example: amet
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      device_name:
+        name: device_name
+        description: ''
+        required: true
+        example: minima
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+    cleanBodyParameters:
+      username: quo
+      password: amet
+      device_name: minima
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - PUT
+    uri: api/partner/auth/password
+    metadata:
+      groupName: Partner
+      groupDescription: |-
+
+        APIs for Partner system
+      subgroup: Auth
+      subgroupDescription: 'Auth for Partner'
+      title: 'Partner update password'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      password:
+        name: password
+        description: ''
+        required: true
+        example: accusantium
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      new_password:
+        name: new_password
+        description: 'The value and <code>password</code> must be different.'
+        required: true
+        example: consequatur
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+    cleanBodyParameters:
+      password: accusantium
+      new_password: consequatur
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: api/partner/profile/me
+    metadata:
+      groupName: Partner
+      groupDescription: |-
+
+        APIs for partner app
+      subgroup: Profile
+      subgroupDescription: 'get self profile'
+      title: 'Get Self Profile - Return account data of current partner'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          vary: Origin
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - PUT
+    uri: api/partner/profile/me
+    metadata:
+      groupName: Partner
+      groupDescription: |-
+
+        APIs for partner app
+      subgroup: Profile
+      subgroupDescription: 'profile management'
+      title: 'Update Self Profile'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      name:
+        name: name
+        description: ''
+        required: true
+        example: officia
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      phones:
+        name: phones
+        description: 'Trường value phải có độ dài ít nhất 8 kí tự. Trường value không được có nhiều hơn 11 kí tự.'
+        required: false
+        example:
+          - zc
+        type: 'string[]'
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      description:
+        name: description
+        description: ''
+        required: false
+        example: 'Autem modi suscipit nihil molestias blanditiis.'
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+    cleanBodyParameters:
+      name: officia
+      phones:
+        - zc
+      description: 'Autem modi suscipit nihil molestias blanditiis.'
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - PUT
+    uri: api/partner/profile/me/avatar
+    metadata:
+      groupName: Partner
+      groupDescription: |-
+
+        APIs for partner app
+      subgroup: Profile
+      subgroupDescription: 'profile management'
+      title: 'Update Self Avatar'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      avatar:
+        name: avatar
+        description: ''
+        required: true
+        example: quia
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+    cleanBodyParameters:
+      avatar: quia
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - DELETE
+    uri: api/partner/profile/me/avatar
+    metadata:
+      groupName: Partner
+      groupDescription: |-
+
+        APIs for partner app
+      subgroup: Profile
+      subgroupDescription: 'profile management'
+      title: 'Delete Self Avatar'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: api/partner/stations
+    metadata:
+      groupName: Partner
+      groupDescription: |-
+
+        APIs for partner app
+      subgroup: Station
+      subgroupDescription: 'partner create station'
+      title: 'Create Station - Handle an incoming create station request from partner.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      name:
+        name: name
+        description: 'Trường value không được có nhiều hơn 255 kí tự.'
+        required: true
+        example: iiplxudupffnqaosj
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      address:
+        name: address
+        description: 'This field is required when none of <code>latitude</code> and <code>longitude</code> are present.'
+        required: false
+        example: blanditiis
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      longitude:
+        name: longitude
+        description: 'This field is required when <code>address</code> is not present.  This field is required when <code>latitude</code> is present. Trường value không được nhỏ hơn -180. Trường value không được lớn hơn 180.'
+        required: false
+        example: 3
+        type: number
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      latitude:
+        name: latitude
+        description: 'This field is required when <code>address</code> is not present.  This field is required when <code>longitude</code> is present. Trường value không được nhỏ hơn -90. Trường value không được lớn hơn 90.'
+        required: false
+        example: 1
+        type: number
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      city_code:
+        name: city_code
+        description: 'Trường value không được nhỏ hơn 0. Trường value không được lớn hơn 99.'
+        required: true
+        example: 11
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      district_code:
+        name: district_code
+        description: ''
+        required: true
+        example: 19
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      ward_code:
+        name: ward_code
+        description: ''
+        required: false
+        example: 1
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+    cleanBodyParameters:
+      name: iiplxudupffnqaosj
+      address: blanditiis
+      longitude: 3
+      latitude: 1
+      city_code: 11
+      district_code: 19
+      ward_code: 1
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - PUT
+    uri: 'api/partner/stations/{id}'
+    metadata:
+      groupName: Partner
+      groupDescription: |-
+
+        APIs for partner app
+      subgroup: Station
+      subgroupDescription: 'Station Management'
+      title: 'Create Station - Handle an incoming create station request from partner.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the station.'
+        required: true
+        example: 1
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+    cleanUrlParameters:
+      id: 1
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      station_id:
+        name: station_id
+        description: ''
+        required: true
+        example: 16.9
+        type: number
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      name:
+        name: name
+        description: 'Trường value không được có nhiều hơn 255 kí tự.'
+        required: true
+        example: vcaacz
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+    cleanBodyParameters:
+      station_id: 16.9
+      name: vcaacz
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: api/partner/stations
+    metadata:
+      groupName: Partner
+      groupDescription: |-
+
+        APIs for Partner system
+      subgroup: Station
+      subgroupDescription: 'Partner get stations'
+      title: 'Get Station - Handle an incoming get station request from partner.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          vary: Origin
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: api/partner/routes
+    metadata:
+      groupName: Partner
+      groupDescription: |-
+
+        APIs for Partner system
+      subgroup: Route
+      subgroupDescription: 'Partner create routes'
+      title: 'Create Route - Handle an incoming create route request from partner.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      start_city_code:
+        name: start_city_code
+        description: 'The value and <code>end_city_code</code> must be different. Trường value không được lớn hơn 99. Trường value không được nhỏ hơn 1.'
+        required: true
+        example: 8
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      start_district_code:
+        name: start_district_code
+        description: 'The value and <code>end_district_code</code> must be different. Trường value không được lớn hơn 999. Trường value không được nhỏ hơn 100.'
+        required: true
+        example: 91
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      end_city_code:
+        name: end_city_code
+        description: 'The value and <code>start_city_code</code> must be different. Trường value không được lớn hơn 99. Trường value không được nhỏ hơn 1.'
+        required: true
+        example: 55
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      end_district_code:
+        name: end_district_code
+        description: 'The value and <code>start_district_code</code> must be different. Trường value không được lớn hơn 999. Trường value không được nhỏ hơn 100.'
+        required: true
+        example: 94
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      name:
+        name: name
+        description: ''
+        required: true
+        example: aut
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      package_types:
+        name: package_types
+        description: ''
+        required: true
+        example:
+          - 5
+        type: 'integer[]'
+        enumValues:
+          - 0
+          - 1
+          - 2
+          - 3
+          - 4
+          - 5
+        exampleWasSpecified: false
+        custom: []
+      milestones:
+        name: milestones
+        description: ''
+        required: true
+        example:
+          - et
+        type: 'integer[]'
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      'milestones[].station_id':
+        name: 'milestones[].station_id'
+        description: ''
+        required: true
+        example: 12
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      'milestones[].distance_from_previous':
+        name: 'milestones[].distance_from_previous'
+        description: 'Trường value không được nhỏ hơn 0.'
+        required: true
+        example: 83
+        type: number
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      'milestones[].hubs':
+        name: 'milestones[].hubs'
+        description: ''
+        required: false
+        example:
+          - consequatur
+        type: 'integer[]'
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      'milestones[].hubs[].id':
+        name: 'milestones[].hubs[].id'
+        description: ''
+        required: true
+        example: 19
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      'milestones[].hubs[].distance_from_milestone':
+        name: 'milestones[].hubs[].distance_from_milestone'
+        description: 'Trường value không được nhỏ hơn 0.'
+        required: true
+        example: 79
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+    cleanBodyParameters:
+      start_city_code: 8
+      start_district_code: 91
+      end_city_code: 55
+      end_district_code: 94
+      name: aut
+      package_types:
+        - 5
+      milestones:
+        - et
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: api/partner/routes
+    metadata:
+      groupName: Partner
+      groupDescription: |-
+
+        APIs for Partner system
+      subgroup: Route
+      subgroupDescription: 'Partner create routes'
+      title: 'Get Route - Handle an incoming get route request from partner.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          vary: Origin
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: api/partner/hubs
+    metadata:
+      groupName: Partner
+      groupDescription: |-
+
+        APIs for Partner system
+      subgroup: Hub
+      subgroupDescription: 'Partner get hubs'
+      title: 'Get Hub - Handle an incoming get hub request from partner.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          vary: Origin
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: api/partner/transactions
+    metadata:
+      groupName: Partner
+      groupDescription: |-
+
+        APIs for Partner system
+      subgroup: Transaction
+      subgroupDescription: 'Partner get transaction'
+      title: 'Get Transactions - Handle an incoming get transactions request from partner.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          vary: Origin
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: api/partner/wallets/balance
+    metadata:
+      groupName: Partner
+      groupDescription: |-
+
+        APIs for Partner system
+      subgroup: Transaction
+      subgroupDescription: 'Partner get transaction'
+      title: 'View balance - Handle an incoming view balance request from partner.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          vary: Origin
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - DELETE
+    uri: 'api/partner/transaction-requests/{id}'
+    metadata:
+      groupName: Partner
+      groupDescription: |-
+
+        APIs for Partner system
+      subgroup: Transaction
+      subgroupDescription: 'Partner get transaction'
+      title: 'Cancel Transaction Request - Handle an incoming cancel transactions request from partner.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the transaction request.'
+        required: true
+        example: provident
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+    cleanUrlParameters:
+      id: provident
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: api/partner/transaction-requests
+    metadata:
+      groupName: Partner
+      groupDescription: |-
+
+        APIs for Partner system
+      subgroup: Transaction
+      subgroupDescription: 'Partner get transaction'
+      title: 'Get Transaction Requests - Handle an incoming get transaction requests requested from partner.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          vary: Origin
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: api/partner/transaction-requests/topup
+    metadata:
+      groupName: Partner
+      groupDescription: |-
+
+        APIs for Partner system
+      subgroup: Transaction
+      subgroupDescription: 'Partner get transaction'
+      title: 'Create top-up Transactions - Handle an incoming create top-up transactions request from partner.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      amount:
+        name: amount
+        description: 'Trường value không được nhỏ hơn 10000.'
+        required: true
+        example: 3916
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+    cleanBodyParameters:
+      amount: 3916
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: api/partner/transaction-requests/withdraw
+    metadata:
+      groupName: Partner
+      groupDescription: |-
+
+        APIs for Partner system
+      subgroup: Transaction
+      subgroupDescription: 'Partner get transaction'
+      title: 'Create withdraw Transactions - Handle an incoming create withdraw transactions request from partner.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      amount:
+        name: amount
+        description: 'Trường value không được nhỏ hơn 10000.'
+        required: true
+        example: 727
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+    cleanBodyParameters:
+      amount: 727
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: api/partner/orders/starting
+    metadata:
+      groupName: Partner
+      groupDescription: |-
+
+        APIs for Partner system
+      subgroup: Order
+      subgroupDescription: 'Order interactions'
+      title: 'Get starting orders - Return a List of Orders that are about to be brought in by customers'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          vary: Origin
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: api/partner/orders/ending
+    metadata:
+      groupName: Partner
+      groupDescription: |-
+
+        APIs for Partner system
+      subgroup: Order
+      subgroupDescription: 'Order interactions'
+      title: 'Get ending orders - Return a List of Orders to be picked up from hubs and waiting for customers to receive'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          vary: Origin
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: api/partner/orders/done
+    metadata:
+      groupName: Partner
+      groupDescription: |-
+
+        APIs for Partner system
+      subgroup: Order
+      subgroupDescription: 'Order interactions'
+      title: 'Get done orders - Return a List of Orders have been done belong to partner'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          vary: Origin
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: api/partner/orders/cancelled
+    metadata:
+      groupName: Partner
+      groupDescription: |-
+
+        APIs for Partner system
+      subgroup: Order
+      subgroupDescription: 'Order interactions'
+      title: 'Get cancelled orders - Return a List of Orders cancelled'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          vary: Origin
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: api/partner/orders
+    metadata:
+      groupName: Partner
+      groupDescription: |-
+
+        APIs for Partner system
+      subgroup: Order
+      subgroupDescription: 'Order interactions'
+      title: 'Get straight orders - Return a List of Orders that are handled by only one partner'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          vary: Origin
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - PUT
+    uri: 'api/partner/orders/{code}/status/confirmed'
+    metadata:
+      groupName: Partner
+      groupDescription: |-
+
+        APIs for Partner system
+      subgroup: Order
+      subgroupDescription: 'Order interactions'
+      title: "Confirm order - Update an order's status to Confirmed"
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      code:
+        name: code
+        description: ''
+        required: true
+        example: 2
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+    cleanUrlParameters:
+      code: 2
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      weight:
+        name: weight
+        description: 'Trường value không được nhỏ hơn 0.'
+        required: true
+        example: 85
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      height:
+        name: height
+        description: 'Trường value không được nhỏ hơn 0.'
+        required: true
+        example: 50
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      length:
+        name: length
+        description: 'Trường value không được nhỏ hơn 0.'
+        required: true
+        example: 76
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      width:
+        name: width
+        description: 'Trường value không được nhỏ hơn 0.'
+        required: true
+        example: 90
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      package_value:
+        name: package_value
+        description: 'Trường value không được nhỏ hơn 0.'
+        required: true
+        example: 77
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+    cleanBodyParameters:
+      weight: 85
+      height: 50
+      length: 76
+      width: 90
+      package_value: 77
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - PUT
+    uri: 'api/partner/orders/{code}/status/accepted'
+    metadata:
+      groupName: Partner
+      groupDescription: |-
+
+        APIs for Partner system
+      subgroup: Order
+      subgroupDescription: 'Order interactions'
+      title: 'Accept order - Update an order status to accepted'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      code:
+        name: code
+        description: ''
+        required: true
+        example: 2
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+    cleanUrlParameters:
+      code: 2
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      image:
+        name: image
+        description: ''
+        required: true
+        example: non
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      code:
+        name: code
+        description: ''
+        required: true
+        example: ipsam
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+    cleanBodyParameters:
+      image: non
+      code: ipsam
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - PUT
+    uri: 'api/partner/orders/{code}/status/delivering'
+    metadata:
+      groupName: Partner
+      groupDescription: |-
+
+        APIs for Partner system
+      subgroup: Order
+      subgroupDescription: 'Order interactions'
+      title: "Delivering - Update an order's status to Delivering"
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      code:
+        name: code
+        description: ''
+        required: true
+        example: 2
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+    cleanUrlParameters:
+      code: 2
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      driver_id:
+        name: driver_id
+        description: ''
+        required: true
+        example: 13
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      vehicle_id:
+        name: vehicle_id
+        description: ''
+        required: true
+        example: 4
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      code:
+        name: code
+        description: ''
+        required: true
+        example: possimus
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+    cleanBodyParameters:
+      driver_id: 13
+      vehicle_id: 4
+      code: possimus
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - PUT
+    uri: 'api/partner/orders/{code}/status/delivered'
+    metadata:
+      groupName: Partner
+      groupDescription: |-
+
+        APIs for Partner system
+      subgroup: Order
+      subgroupDescription: 'Order interactions'
+      title: "Delivered - Update an order's status to Delivered"
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      code:
+        name: code
+        description: ''
+        required: true
+        example: 2
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+    cleanUrlParameters:
+      code: 2
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - PUT
+    uri: 'api/partner/orders/{code}/status/done'
+    metadata:
+      groupName: Partner
+      groupDescription: |-
+
+        APIs for Partner system
+      subgroup: Order
+      subgroupDescription: 'Order interactions'
+      title: "Done - Update an order's status to Done"
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      code:
+        name: code
+        description: ''
+        required: true
+        example: 2
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+    cleanUrlParameters:
+      code: 2
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      code:
+        name: code
+        description: ''
+        required: true
+        example: inventore
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      image:
+        name: image
+        description: ''
+        required: true
+        example: tenetur
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+    cleanBodyParameters:
+      code: inventore
+      image: tenetur
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - PUT
+    uri: 'api/partner/orders/{code}/status/lost'
+    metadata:
+      groupName: Partner
+      groupDescription: |-
+
+        APIs for Partner system
+      subgroup: Order
+      subgroupDescription: 'Order interactions'
+      title: "Confirm order - Update an order's status to Confirmed"
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      code:
+        name: code
+        description: ''
+        required: true
+        example: 2
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+    cleanUrlParameters:
+      code: 2
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      reason:
+        name: reason
+        description: ''
+        required: true
+        example: impedit
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+    cleanBodyParameters:
+      reason: impedit
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: api/partner/statistics/revenue/daily
+    metadata:
+      groupName: Partner
+      groupDescription: |-
+
+        APIs for Partner system
+      subgroup: Statistics
+      subgroupDescription: 'Partner manage statistics'
+      title: 'Get daily revenue - Handle an incoming get month revenue request from partner.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      year:
+        name: year
+        description: 'Trường value không được nhỏ hơn 2020. Trường value không được lớn hơn 2100.'
+        required: true
+        example: 17
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      month:
+        name: month
+        description: 'Trường value không được nhỏ hơn 1. Trường value không được lớn hơn 12.'
+        required: true
+        example: 2
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+    cleanBodyParameters:
+      year: 17
+      month: 2
+    fileParameters: []
+    responses:
+      -
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          vary: Origin
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: api/partner/statistics/revenue/monthly
+    metadata:
+      groupName: Partner
+      groupDescription: |-
+
+        APIs for Partner system
+      subgroup: Statistics
+      subgroupDescription: 'Partner manage statistics'
+      title: 'Get monthly revenue - Handle an incoming get monthly revenue request from partner.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      year:
+        name: year
+        description: 'Trường value không được nhỏ hơn 2020. Trường value không được lớn hơn 2100.'
+        required: true
+        example: 17
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+    cleanBodyParameters:
+      year: 17
+    fileParameters: []
+    responses:
+      -
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          vary: Origin
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: api/partner/drivers
+    metadata:
+      groupName: Partner
+      groupDescription: |-
+
+        APIs for Partner system
+      subgroup: Driver
+      subgroupDescription: 'Partner get Drivers'
+      title: 'Get Driver - Handle an incoming get Driver request from partner.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          vary: Origin
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - PUT
+    uri: 'api/partner/drivers/{id}'
+    metadata:
+      groupName: Partner
+      groupDescription: |-
+
+        APIs for partner app
+      subgroup: Driver
+      subgroupDescription: 'Driver management'
+      title: 'Update Driver - Handle an incoming Update Driver request from partner.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the driver.'
+        required: true
+        example: ea
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+    cleanUrlParameters:
+      id: ea
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      id:
+        name: id
+        description: ''
+        required: true
+        example: 5
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      name:
+        name: name
+        description: ''
+        required: true
+        example: voluptatem
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      phone:
+        name: phone
+        description: 'Trường value phải có độ dài ít nhất 10 kí tự. Trường value không được có nhiều hơn 11 kí tự.'
+        required: false
+        example: zm
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+    cleanBodyParameters:
+      id: 5
+      name: voluptatem
+      phone: zm
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - PUT
+    uri: 'api/partner/drivers/{id}/avatar'
+    metadata:
+      groupName: Partner
+      groupDescription: |-
+
+        APIs for partner app
+      subgroup: Driver
+      subgroupDescription: 'Driver management'
+      title: 'Update Self Avatar'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the driver.'
+        required: true
+        example: quasi
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+    cleanUrlParameters:
+      id: quasi
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      avatar:
+        name: avatar
+        description: ''
+        required: true
+        example: ducimus
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      id:
+        name: id
+        description: ''
+        required: true
+        example: 9
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+    cleanBodyParameters:
+      avatar: ducimus
+      id: 9
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: api/partner/drivers
+    metadata:
+      groupName: Partner
+      groupDescription: |-
+
+        APIs for partner app
+      subgroup: Driver
+      subgroupDescription: 'Driver management'
+      title: 'Create Driver - Handle an incoming Create Driver request from partner.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      avatar:
+        name: avatar
+        description: ''
+        required: true
+        example: voluptates
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      name:
+        name: name
+        description: ''
+        required: true
+        example: at
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      phone:
+        name: phone
+        description: 'Trường value phải có độ dài ít nhất 10 kí tự. Trường value không được có nhiều hơn 11 kí tự.'
+        required: false
+        example: utogslapwii
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+    cleanBodyParameters:
+      avatar: voluptates
+      name: at
+      phone: utogslapwii
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - DELETE
+    uri: 'api/partner/drivers/{id}'
+    metadata:
+      groupName: Partner
+      groupDescription: |-
+
+        APIs for Partner system
+      subgroup: Driver
+      subgroupDescription: 'Partner Delete Drivers'
+      title: 'Delete Driver - Handle an incoming Delete Driver request from partner.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the driver.'
+        required: true
+        example: nesciunt
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+    cleanUrlParameters:
+      id: nesciunt
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      id:
+        name: id
+        description: ''
+        required: true
+        example: 17
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+    cleanBodyParameters:
+      id: 17
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: api/partner/vehicles
+    metadata:
+      groupName: Partner
+      groupDescription: |-
+
+        APIs for Partner system
+      subgroup: Vehicle
+      subgroupDescription: 'Partner get Vehicles'
+      title: 'Get Vehicle - Handle an incoming get Vehicle request from partner.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          vary: Origin
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - PUT
+    uri: 'api/partner/vehicles/{id}'
+    metadata:
+      groupName: Partner
+      groupDescription: |-
+
+        APIs for partner app
+      subgroup: Vehicle
+      subgroupDescription: 'Vehicle management'
+      title: 'Update Vehicle - Handle an incoming Update Vehicle request from partner.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the vehicle.'
+        required: true
+        example: adipisci
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+    cleanUrlParameters:
+      id: adipisci
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      id:
+        name: id
+        description: ''
+        required: true
+        example: 19
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      type:
+        name: type
+        description: ''
+        required: true
+        example: fugiat
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      plate_number:
+        name: plate_number
+        description: 'Trường value phải có độ dài ít nhất 8 kí tự. Trường value không được có nhiều hơn 15 kí tự.'
+        required: false
+        example: ybarsbwzrzporhf
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+    cleanBodyParameters:
+      id: 19
+      type: fugiat
+      plate_number: ybarsbwzrzporhf
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - PUT
+    uri: 'api/partner/vehicles/{id}/image'
+    metadata:
+      groupName: Partner
+      groupDescription: |-
+
+        APIs for partner app
+      subgroup: Vehicle
+      subgroupDescription: 'Vehicle management'
+      title: 'Update Self Image'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the vehicle.'
+        required: true
+        example: ut
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+    cleanUrlParameters:
+      id: ut
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      image:
+        name: image
+        description: ''
+        required: true
+        example: voluptatibus
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      id:
+        name: id
+        description: ''
+        required: true
+        example: 20
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+    cleanBodyParameters:
+      image: voluptatibus
+      id: 20
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: api/partner/vehicles
+    metadata:
+      groupName: Partner
+      groupDescription: |-
+
+        APIs for partner app
+      subgroup: Vehicle
+      subgroupDescription: 'Vehicle management'
+      title: 'Create Vehicle - Handle an incoming Create Vehicle request from partner.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      image:
+        name: image
+        description: ''
+        required: true
+        example: libero
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      type:
+        name: type
+        description: ''
+        required: true
+        example: quia
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      plate_number:
+        name: plate_number
+        description: 'Trường value phải có độ dài ít nhất 8 kí tự. Trường value không được có nhiều hơn 15 kí tự.'
+        required: false
+        example: in
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+    cleanBodyParameters:
+      image: libero
+      type: quia
+      plate_number: in
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - DELETE
+    uri: 'api/partner/vehicles/{id}'
+    metadata:
+      groupName: Partner
+      groupDescription: |-
+
+        APIs for Partner system
+      subgroup: Vehicle
+      subgroupDescription: 'Partner Delete Vehicles'
+      title: 'Delete Vehicle - Handle an incoming Delete Vehicle request from partner.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the vehicle.'
+        required: true
+        example: odit
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+    cleanUrlParameters:
+      id: odit
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      id:
+        name: id
+        description: ''
+        required: true
+        example: 16
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+    cleanBodyParameters:
+      id: 16
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
