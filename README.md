@@ -1,39 +1,75 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Introduction
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+This website is designed for customers and is part of the official [ChanhXeMientay](https://chanhxemientay.vercel.app/) project — a 5-month final capstone project undertaken by a team of FPT students.
 
-## Website
-<a href="https://chanhxemientay.vercel.app">ChanhXe</a>
+ChanhXeMienTay is a platform that bridges 'Nhà chành' and customers, offering flexible route search capabilities matched by the ChanhXeMienTay system. It not only enables customers to find suitable routes but also provides 'Nhà chành' with modern and user-friendly features management at an extremely affordable fee.
 
-## About This Project
+## Order relevant repositories
 
-This is a Laravel project configured with Swoole Server through Docker. Here are a list of enviroment dependency:
+- Website for customers: https://chanhxemientay.vercel.app/
 
--   PHP ^8.2.
--   Swoole Server through Laravel Octane
--   Laravel Sail
+- Mobile app for customers:
+https://github.com/nthieu1332002/chanhxemientay-customer-mobile/
 
-## Local Setup
+- Partner / Nhà chành: https://chanhxepartner-k16.vercel.app/
 
-### Install directly into wsl2 (recommended)
+- Admin / staff: https://capstone-project-admin-tungvtse.vercel.app/
 
-Here are the steps to set up local environment (recommended [windows terminal's](https://apps.microsoft.com/store/detail/windows-terminal/9N0DX20HK701) linux subsystem shell as the main cli)
+- Backend: https://github.com/Lumethys/fpt-capstone-backend/
 
-1. clone this project directly into your wsl2 system, i.e `\\wsl$\Ubuntu\home\<your-username>\<your-local-folder-name>`
-2. `cd ./<your-local-folder-name>`
-3. run the bash file `init.sh` to install PHP depednencies and set up `.env` file: `bash init.sh` or `sudo bash init.sh`
-4. run the bash file `firstStart.sh` to actually build your Docker image and container, please be aware that it could take up to 5 minutes to pull the images and build your containers: `bash firstStart.sh` or `sudo bash firstStart.sh`
-5. now you will have a fully configured Laravel Octane application running on Swoole in Docker. The next time you start the app you just need to start it through your Docker GUI or with command `./vendor/bin/sail up`, or `sail up` if you have [configured your alias](https://laravel.com/docs/sail#configuring-a-shell-alias)
 
-### Install into Windows and mount to wsl2
+# Features
+   - Authentication
+   - Search routes
+   - Booking
+   - Order details
+   - Tracking orders
+   - Tracking payments
+   - View notifications
+   - Account settings
+   - View partner/Nha chanh information
+   - Policy/pricing/activities
 
-    **TODO**
+# Screenshots
 
-## Local Development
+___1. Homepage___
 
-    Hot reload is configured and enabled, so you don't need to manually call [`sail artisan octane:reload`] or [`sail artisan octane:stop` and `sail artisan octane:start`] again.
+<img src="https://res.cloudinary.com/dad0fircy/image/upload/v1705408211/capstone/homepage_t2exrr.png" alt="home" width="400">
+
+___2. Search screen___
+
+<img src="https://res.cloudinary.com/dad0fircy/image/upload/v1705408205/capstone/search_lgfs1d.png" alt="search-page" width="400">
+
+___3. Booking form screen___
+
+<img src="https://res.cloudinary.com/dad0fircy/image/upload/v1705408204/capstone/form_zslxy9.png" alt="form-page2" width="400">
+<img src="https://res.cloudinary.com/dad0fircy/image/upload/v1705408204/capstone/form1_ul08h9.png" alt="form-page2" width="400">
+
+___4. Booking success screen___
+
+<img src="https://res.cloudinary.com/dad0fircy/image/upload/v1705408204/capstone/success_xqpdsf.png" alt="form-booking-success-page" width="400">
+
+___5. Order list screen___
+
+<img src="https://res.cloudinary.com/dad0fircy/image/upload/v1705408205/capstone/orders_icneyr.png" alt="orders" width="400">
+
+___6. Order detail screen___
+
+<img src="https://res.cloudinary.com/dad0fircy/image/upload/v1705408205/capstone/order_detail_uq48vh.png" alt="order detail" width="400">
+
+___7. Tracking order screen___
+
+<img src="https://res.cloudinary.com/dad0fircy/image/upload/v1705408206/capstone/tracking_b56lrc.png" alt="tracking" width="400">
+
+___8. Payment list screen___
+
+<img src="https://res.cloudinary.com/dad0fircy/image/upload/v1705408206/capstone/payments_ko3omj.png" alt="payments" width="400">
+
+___9. Account setting screen___
+
+<img src="https://res.cloudinary.com/dad0fircy/image/upload/v1705408205/capstone/settings_avtdgy.png" alt="settings" width="400">
+
+___10. Partner/ Nhà chành screen___
+
+<img src="https://res.cloudinary.com/dad0fircy/image/upload/v1705408208/capstone/nhachanh_xvgaxo.png" alt="nha chanh" width="400">
+
